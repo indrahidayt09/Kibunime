@@ -1,9 +1,9 @@
-import { getAnimeResponse } from "@/libs/api-libs";
+import { getAnimeResponse } from "@/lib/api-libs";
 import VideoPlayer from "@/components/Utilities/VideoPlayer";
 import Image from "next/image";
 import CollectionButton from "@/components/AnimeList/CollectionButton";
-import { authUserSession } from "@/libs/auth-libs";
-import prisma from "@/libs/prisma";
+import { authUserSession } from "@/lib/auth-libs";
+import prisma from "@/lib/prisma";
 import CommentInput from "@/components/AnimeList/CommentInput";
 import CommentBox from "@/components/AnimeList/CommentBox";
 import { Inter } from "next/font/google";
@@ -91,13 +91,13 @@ const Page = async ({ params: { id } }) => {
       <div className="p-4 pt-5">
         <div className="pb-5">
           {user && (
-          <CommentInput
-            anime_mal_id={id}
-            user_email={user?.email}
-            username={user?.name}
-            anime_title={anime.data.title}
-          />
-        )}
+            <CommentInput
+              anime_mal_id={id}
+              user_email={user?.email}
+              username={user?.name}
+              anime_title={anime.data.title}
+            />
+          )}
         </div>
 
         <h3 className="text-color-primary text-md mb-1">Komentar Penonton</h3>

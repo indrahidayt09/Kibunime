@@ -1,7 +1,5 @@
-
-
 import Link from "next/link";
-import { authUserSession } from "@/libs/auth-libs";
+import { authUserSession } from "@/lib/auth-libs";
 
 const UserActionButton = async () => {
   const user = await authUserSession();
@@ -12,7 +10,10 @@ const UserActionButton = async () => {
   return (
     <div className="flex justify-between gap-2">
       {user ? (
-        <Link href="/users/dashboard" className="text-sm py-1  text-color-light hover:opacity-70">
+        <Link
+          href="/users/dashboard"
+          className="text-sm py-1  text-color-light hover:opacity-70"
+        >
           Dashboard
         </Link>
       ) : null}

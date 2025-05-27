@@ -1,4 +1,4 @@
-import { authUserSession } from "@/libs/auth-libs";
+import { authUserSession } from "@/lib/auth-libs";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,7 +7,6 @@ const Page = async () => {
 
   return (
     <div className="w-full m-h-full flex justify-center items-center pt-5">
-
       <div className="flex flex-col justify-center items-center gap-5">
         <h2 className="text-2xl text-color-secondary">Welcome, {user?.name}</h2>
         <Image src={user?.image} alt="..." width={250} height={250} />
@@ -26,7 +25,6 @@ const Page = async () => {
           </Link>
         </div>
       </div>
-
     </div>
   );
 };

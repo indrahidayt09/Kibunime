@@ -1,4 +1,4 @@
-import prisma from "@/libs/prisma";
+import prisma from "@/lib/prisma";
 import React from "react";
 import { Inter } from "next/font/google";
 

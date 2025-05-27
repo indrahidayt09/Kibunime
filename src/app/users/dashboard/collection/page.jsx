@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Dashboard/Header";
-import { authUserSession } from "@/libs/auth-libs";
-import prisma from "@/libs/prisma";
+import { authUserSession } from "@/lib/auth-libs";
+import prisma from "@/lib/prisma";
 
 const Page = async () => {
   const user = await authUserSession();
